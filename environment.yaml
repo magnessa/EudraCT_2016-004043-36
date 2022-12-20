@@ -1,0 +1,70 @@
+## conda requirements for all packages needed to run the analyses
+#
+# To install this environment, use 
+#
+#     $ mamba env create -f environment.yml
+#
+# or:  
+#     $ conda env create -f environment.yml
+#
+# To activate this environment, use
+#
+#     $ conda activate M_Essand_2101
+#
+# To deactivate an active environment, use
+#
+#     $ conda deactivate
+
+name: M_Essand_2101
+
+channels:
+ - conda-forge
+ - anaconda
+ - bioconda
+ - defaults
+ - r
+
+dependencies:
+ - r-base=4.0.2
+ - r-seurat=4.0.0 
+ - jupyter
+ - rpy2
+ - bioconductor-scater
+ - bioconductor-scran
+ - bioconductor-singlecellexperiment
+ - bioconductor-rhdf5
+ - bioconductor-fgsea
+ - bioconductor-biomart
+ - bioconductor-org.hs.eg.db
+ - bioconductor-batchelor
+ - bioconductor-glmgampoi
+ - bioconductor-mast 
+ - r-pheatmap
+ - r-harmony
+ - r-msigdbr
+ - r-rafalib
+ - r-enrichr
+ - r-devtools
+ - r-biocmanager
+ - r-dplyr
+ - r-igraph
+ - r-umap
+ - r-grr
+ - r-hdf5r
+ - r-optparse
+ - multicore-tsne
+ - requests
+ - r-spam
+ - r-stringi
+ - wget
+ - compilers
+ - r-reshape2
+ - r-rmarkdown
+ - r-harmony
+ - r-spatstat=1.64_1 # fixes issues loading seurat
+ - r-seuratdisk
+ - r-biomartr
+# Manual installation of packages that are not in conda:
+# remotes::install_github('chris-mcginnis-ucsf/DoubletFinder', dependencies=FALSE)
+# install.packages('clustree', dependencies=FALSE)
+# remotes::install_github('satijalab/seurat-data', dependencies=FALSE)
